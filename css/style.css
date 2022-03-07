@@ -9,6 +9,9 @@ body{
 .note-btn:hover{
     background-color: #dce0e2;
 }
+main{
+    min-height: calc(113vh - 224px - 24px);
+}
 
 /* mobile responsibel */
 /* @media only screen and (max-width: 480px)  {
