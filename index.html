@@ -46,6 +46,7 @@
           <!-- button section -->
           <div class="take-note mt-5 col-md-3">
             <button
+                
               onclick="showNoteInput()"
               class="btn note-btn btn-light rounded-pill px-5 mt-4 py-2"
             >
@@ -54,20 +55,20 @@
             </button>
           </div>
           <!-- text area -->
-          <div class="note-input d-none col-md-4 mt-4">
+          <div id="show-note" class="note-input d-none col-md-4 mt-4">
             <div class="mb-3">
               <label
-                for="exampleFormControlTextarea1"
+                for="note-describe"
                 class="form-label text-secondary"
                 >Describe Note</label
               >
               <textarea
                 class="form-control"
-                id="exampleFormControlTextarea1"
+                id="note-describe"
                 placeholder="Please Provide a Title And Than Describe"
                 rows="4"
               ></textarea>
-              <button class="btn note-btn btn-light mt-3">Done</button>
+              <button onclick="submitNote()" class="btn note-btn btn-light mt-3">Done</button>
             </div>
           </div>
         </div>
@@ -90,5 +91,6 @@
         </div>
       </div>
     </main>
+    <script src="./js/index.js"></script>
   </body>
 </html>
