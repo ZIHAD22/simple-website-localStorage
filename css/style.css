@@ -9,3 +9,11 @@ body{
 .note-btn:hover{
     background-color: #dce0e2;
 }
+
+/* mobile responsibel */
+@media only screen and (max-width: 480px)  {
+    #note-btn{
+        padding: 11px 132px !important;
+    }
+
+}
