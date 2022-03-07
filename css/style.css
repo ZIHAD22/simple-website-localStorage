@@ -3,3 +3,9 @@ body{
     font-weight: 200;
     color: rgb(70, 68, 68);
 }
+.note-btn{
+    transition: 1s;
+}
+.note-btn:hover{
+    background-color: #dce0e2;
+}
