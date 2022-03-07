@@ -27,7 +27,7 @@
       crossorigin="anonymous"
     ></script>
     <!-- custom css -->
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- header -->
@@ -44,7 +44,7 @@
       <div class="container">
         <div class="row justify-content-between">
           <!-- button section -->
-          <div class="take-note mt-5 col-md-4">
+          <div class="take-note mt-5 col-md-4 text-center col-sm-6">
             <button
               id="note-btn"
               onclick="showNoteInput()"
@@ -55,7 +55,7 @@
             </button>
           </div>
           <!-- text area -->
-          <div id="show-note" class="note-input d-none col-md-4 mt-4">
+          <div id="show-note" class="note-input d-none col-md-4 col-sm-6 mt-4">
             <div class="mb-3">
               <label for="note-describe" class="form-label text-secondary"
                 >Describe Note</label
@@ -75,7 +75,7 @@
             </div>
           </div>
           <!-- all clear btn -->
-          <div class="col-md-4 mt-4">
+          <div class="col-md-4 col-sm-6 text-center mt-4">
             <button
               id="note-btn"
               onclick="clearAllNote()"
