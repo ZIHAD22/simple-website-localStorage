@@ -15,5 +15,8 @@ body{
     #note-btn{
         padding: 11px 132px !important;
     }
+    body{
+        background-color: aquamarine;
+    }
 
 }
