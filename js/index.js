@@ -44,7 +44,6 @@ const displayAllNote = async () => {
         `
       showAllNote.appendChild(div)
     }
-    i = 0
   } else {
     showAllNote.textContent = ''
     message.innerHTML = `
