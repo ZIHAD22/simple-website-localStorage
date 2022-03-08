@@ -3,9 +3,8 @@ const takeNoteField = document.getElementById('note-describe')
 const showAllNote = document.getElementById('result')
 const message = document.getElementById('message')
 // display All note
-const displayAllNote = () => {
+const displayAllNote = async () => {
   const data = getNote()
-  console.log()
   if (Object.keys(data).length !== 0) {
     message.innerHTML = `
     <div id="message">
@@ -13,7 +12,7 @@ const displayAllNote = () => {
     </div>
       `
     showAllNote.textContent = ''
-    let i = 1
+    let i = 0
     for (const note in data) {
       const div = document.createElement('div')
       div.classList.add('col-md-3')
@@ -45,6 +44,7 @@ const displayAllNote = () => {
         `
       showAllNote.appendChild(div)
     }
+    i = 0
   } else {
     showAllNote.textContent = ''
     message.innerHTML = `
