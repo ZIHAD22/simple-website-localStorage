@@ -3,21 +3,24 @@ const takeNoteField = document.getElementById('note-describe')
 const showAllNote = document.getElementById('result')
 const message = document.getElementById('message')
 // display All note
-const displayAllNote = async () => {
-  const data = getNote()
-  if (Object.keys(data).length !== 0) {
-    message.innerHTML = `
+const displayAllNote = async (ssd) => {
+  const loginInfo = localStorage.getItem('login')
+  console.log(loginInfo)
+  if (loginInfo) {
+    const data = getNote()
+    if (Object.keys(data).length !== 0) {
+      message.innerHTML = `
     <div id="message">
     <h2 class="text-center my-5 pr-3">Your Note</h2>
     </div>
       `
-    showAllNote.textContent = ''
-    let i = 0
-    for (const note in data) {
-      const div = document.createElement('div')
-      div.classList.add('col-md-3')
-      div.classList.add('col-sm-6')
-      div.innerHTML = `
+      showAllNote.textContent = ''
+      let i = 0
+      for (const note in data) {
+        const div = document.createElement('div')
+        div.classList.add('col-md-3')
+        div.classList.add('col-sm-6')
+        div.innerHTML = `
                 <div class="row">
                 <div class="col-md-6">
                   <label for="note-describe" class="form-label text-secondary"
@@ -42,15 +45,18 @@ const displayAllNote = async () => {
                 cols="10"
               >${data[note]}</textarea>
         `
-      showAllNote.appendChild(div)
-    }
-  } else {
-    showAllNote.textContent = ''
-    message.innerHTML = `
+        showAllNote.appendChild(div)
+      }
+    } else {
+      showAllNote.textContent = ''
+      message.innerHTML = `
     <div id="message">
     <h2 class="text-center my-5 pr-3">${'No Note Available'}</h2>
     </div>
       `
+    }
+  } else {
+    location.assign('http://127.0.0.1:5500/login.html')
   }
 }
 

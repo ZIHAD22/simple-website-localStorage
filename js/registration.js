@@ -15,6 +15,7 @@ const registrationUser = () => {
     const userStringify = JSON.stringify(userObj)
     localStorage.setItem('users', userStringify)
     location.assign('http://127.0.0.1:5500/login.html')
+    localStorage.setItem('login', false)
     userName.value = ''
     userEmail.value = ''
     userPassword.value = ''
