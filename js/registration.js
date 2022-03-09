@@ -13,6 +13,7 @@ const registrationUser = () => {
 
   if (name && email && password && !register) {
     const userStringify = JSON.stringify(userObj)
+    console.log(userStringify)
     localStorage.setItem('users', userStringify)
     location.assign(
       'https://zihad22.github.io/simple-website-localStorage/login.html',
