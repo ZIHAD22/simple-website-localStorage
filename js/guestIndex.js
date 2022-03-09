@@ -59,7 +59,7 @@ const displayAllNote = async () => {
     }
   } else {
     location.assign(
-      'https://zihad22.github.io/simple-website-localStorage/guestIndex.html',
+      'https://zihad22.github.io/simple-website-localStorage/login.html',
     )
   }
 }
