@@ -57,7 +57,7 @@ const displayAllNote = async (ssd) => {
     }
   } else {
     location.assign(
-      'https://zihad22.github.io/simple-website-localStorage/index.html',
+      'https://zihad22.github.io/simple-website-localStorage/login.html',
     )
   }
 }
