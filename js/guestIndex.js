@@ -6,8 +6,6 @@ const message = document.getElementById('message')
 const displayAllNote = async () => {
   const loginInfo = localStorage.getItem('login')
   const guestUser = sessionStorage.getItem('guest')
-  console.log(guestUser)
-  console.log(loginInfo)
   if (loginInfo || guestUser) {
     const data = getNote()
     if (Object.keys(data).length !== 0) {
@@ -94,12 +92,12 @@ const pushToLocalStorage = (note) => {
   const data = getNote()
   data[id] = note
   const dataStringfy = JSON.stringify(data)
-  localStorage.setItem('note', dataStringfy)
+  sessionStorage.setItem('note', dataStringfy)
 }
 
 // get note from local store
 const getNote = () => {
-  const allNote = localStorage.getItem('note')
+  const allNote = sessionStorage.getItem('note')
   let noteObj
   if (allNote) {
     noteObj = JSON.parse(allNote)
@@ -120,7 +118,7 @@ const deleteNote = (id) => {
     }
   }
   let mainNoteStringify = JSON.stringify(withOutDeletedNote)
-  localStorage.setItem('note', mainNoteStringify)
+  sessionStorage.setItem('note', mainNoteStringify)
   displayAllNote()
 }
 
