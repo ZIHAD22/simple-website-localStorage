@@ -24,3 +24,8 @@ const loginUser = () => {
     }
   }
 }
+
+// create guest user
+const createGuestUser = () => {
+  sessionStorage.setItem('guest', true)
+}
