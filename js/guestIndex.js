@@ -8,7 +8,7 @@ const displayAllNote = async () => {
   const guestUser = sessionStorage.getItem('guest')
   console.log(guestUser)
   console.log(loginInfo)
-  if (loginInfo || !guestUser) {
+  if (loginInfo || guestUser) {
     const data = getNote()
     if (Object.keys(data).length !== 0) {
       message.innerHTML = `
@@ -59,7 +59,7 @@ const displayAllNote = async () => {
     }
   } else {
     location.assign(
-      'https://zihad22.github.io/simple-website-localStorage/index.html',
+      'https://zihad22.github.io/simple-website-localStorage/login.html',
     )
   }
 }
