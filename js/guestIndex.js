@@ -6,8 +6,9 @@ const message = document.getElementById('message')
 const displayAllNote = async () => {
   const loginInfo = localStorage.getItem('login')
   const guestUser = sessionStorage.getItem('guest')
-  console.log(loginInfo || guestUser)
-  if (loginInfo) {
+  console.log(guestUser)
+  console.log(loginInfo)
+  if (loginInfo || guestUser) {
     const data = getNote()
     if (Object.keys(data).length !== 0) {
       message.innerHTML = `
