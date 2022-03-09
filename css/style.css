@@ -18,10 +18,11 @@ main{
 .login{
     min-height: calc(107vh - 224px - 24px);
 }
+
 /* mobile responsibel */
-/* @media only screen and (max-width: 480px)  {
-    #note-btn{
-        padding: 11px 132px !important;
+@media only screen and (max-width: 480px)  {
+    .user{
+        text-align: center;
     }
 
-} */
+}
