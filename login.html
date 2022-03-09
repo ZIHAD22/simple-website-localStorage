@@ -34,7 +34,9 @@
     <header>
       <div class="container">
         <div class="d-flex justify-content-center align-content-center">
-          <img width="100px" src="./img/note.png" alt="" />
+          <a href="./index.html"
+            ><img width="100px" src="./img/note.png" alt=""
+          /></a>
           <h1 class="my-auto">Keep Note</h1>
         </div>
       </div>
@@ -43,34 +45,50 @@
     <main class="mt-5 login">
       <div class="container">
         <div class="w-50 mx-auto">
-          <div class="mb-3 row">
-            <label for="user-email" class="col-sm-2 col-form-label"
-              >Email</label
-            >
-            <div class="col-sm-10">
-              <input id="user-email" type="email" class="form-control" />
-            </div>
-          </div>
-          <div class="mb-3 row">
-            <label for="user-password" class="col-sm-2 col-form-label"
-              >Password</label
-            >
-            <div class="col-sm-10">
-              <input
-                id="user-password"
-                type="password"
-                class="form-control"
-                id="inputPassword"
-              />
-            </div>
-            <div class="mt-4 text-center">
-              <button onclick="loginUser()" class="btn btn-warning px-5 me-2">
-                Log in
-              </button>
-              <a class="text-warning" href="./registration.html"
-                >Create a account</a
+          <div class="row">
+            <h3 class="text-center text-secondary">Login</h3>
+            <div class="mb-3">
+              <label for="user-email" class="col-sm-2 col-form-label"
+                >Email</label
               >
-              <a class="text-success" href="./index.html">Login as Guest</a>
+              <div class="col-sm-10">
+                <input id="user-email" type="email" class="form-control" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="user-password" class="col-sm-2 col-form-label"
+                >Password</label
+              >
+              <div class="col-sm-10">
+                <input
+                  id="user-password"
+                  type="password"
+                  class="form-control"
+                  id="inputPassword"
+                />
+              </div>
+              <div class="mt-4">
+                <div class="row">
+                  <div class="col-md-4 col-sm-6">
+                    <button
+                      onclick="loginUser()"
+                      class="btn btn-warning px-5 me-2"
+                    >
+                      Log in
+                    </button>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                    <a class="text-warning" href="./registration.html"
+                      >Create a account</a
+                    >
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                    <a class="text-success ms-2" href="./index.html"
+                      >Login as Guest</a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
