@@ -11,11 +11,15 @@ const loginUser = () => {
     const user = JSON.parse(stringifyUsers)
     // const { email, password } = user
     if (user?.email === emailValue && user?.password === passwordValue) {
-      location.assign('http://127.0.0.1:5500/index.html')
+      location.assign(
+        'https://zihad22.github.io/simple-website-localStorage/index.html',
+      )
       localStorage.setItem('login', true)
     } else {
       localStorage.setItem('login', false)
-      location.assign('http://127.0.0.1:5500/registration.html')
+      location.assign(
+        'https://zihad22.github.io/simple-website-localStorage/registration.html',
+      )
       console.log('please provide a valid information')
     }
   }
