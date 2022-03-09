@@ -6,15 +6,11 @@ const userPassword = document.getElementById('user-password')
 const loginUser = () => {
   const emailValue = userEmail.value
   const passwordValue = userPassword.value
-  const guestUser = sessionStorage.getItem('guest')
   if (emailValue && passwordValue) {
     const stringifyUsers = localStorage.getItem('users')
     const user = JSON.parse(stringifyUsers)
     // const { email, password } = user
-    if (
-      (user?.email === emailValue && user?.password === passwordValue) ||
-      guestUser
-    ) {
+    if (user?.email === emailValue && user?.password === passwordValue) {
       location.assign(
         'https://zihad22.github.io/simple-website-localStorage/index.html',
       )
