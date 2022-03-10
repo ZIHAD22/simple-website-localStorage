@@ -52,7 +52,12 @@
                 >Email</label
               >
               <div class="col-sm-10">
-                <input id="user-email" type="email" class="form-control" />
+                <input
+                  id="user-email"
+                  type="email"
+                  class="form-control"
+                  required
+                />
               </div>
             </div>
             <div class="mb-3">
@@ -65,6 +70,7 @@
                   type="password"
                   class="form-control"
                   id="inputPassword"
+                  required
                 />
               </div>
             </div>
@@ -84,7 +90,10 @@
                   >
                 </div>
                 <div class="col-md-4 col-sm-6 user">
-                  <a onclick="createGuestUser()" class="text-success ms-2" href="./guestIndex.html"
+                  <a
+                    onclick="createGuestUser()"
+                    class="text-success ms-2"
+                    href="./guestIndex.html"
                     >Login as Guest</a
                   >
                 </div>
